@@ -5,7 +5,7 @@ from numpy.typing import NDArray
 img: NDArray[np.uint8] = (np.ones((500, 500), dtype=np.uint8) * 0).astype(np.uint8)
 
 h, w = img.shape
-split_number: int = 4
+split_number: int = 10
 for i in range(split_number):
     if i % 2 == 0:
         img[:, i * w // split_number : (i + 1) * w // split_number] = 255
